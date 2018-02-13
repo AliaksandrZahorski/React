@@ -1,4 +1,5 @@
 export const ADD_RECORD = 'ADD_RECORD';
+export const DELETE_RECORD = 'DELETE_RECORD';
 
 let nextId = 1;
 
@@ -7,4 +8,9 @@ export const addRecord = record => ({
   id: nextId++,
   title: record.title,
   text: record.text,
+});
+
+export const deleteRecord = id => ({
+  type: DELETE_RECORD,
+  id,
 });

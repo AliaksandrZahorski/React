@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import BlogList from './BlogList/BlogList';
+import AddRecord from './AddRecord/AddRecord';
 
 const App = () => (
   <div className="App">
@@ -10,8 +11,8 @@ const App = () => (
       <h1 className="App-title">Welcome to React</h1>
     </header>
     <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
     </p>
+    <AddRecord />
     <BlogList />
   </div>
 )

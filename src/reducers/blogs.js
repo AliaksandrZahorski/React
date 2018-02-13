@@ -1,4 +1,7 @@
-import { ADD_RECORD } from '../actions';
+import {
+  ADD_RECORD,
+  DELETE_RECORD
+} from '../actions';
 
 const initialState = [
   {
@@ -19,6 +22,8 @@ const blogs = (state = initialState, action) => {
           text: action.text,
         }
       ];
+    case DELETE_RECORD:
+      return state.filter(s => s.id !== action.id);
 
     default:
       return state;
