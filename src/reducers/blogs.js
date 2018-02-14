@@ -6,6 +6,7 @@ import {
 const initialState = [
   {
     id: 0,
+    author: 'Author',
     title: 'title',
     text: 'Sample text',
   },
@@ -18,6 +19,7 @@ const blogs = (state = initialState, action) => {
         ...state,
         {
           id: action.id,
+          author: action.author,
           title: action.title,
           text: action.text,
         }

@@ -6,6 +6,7 @@ let nextId = 1;
 export const addRecord = record => ({
   type: ADD_RECORD,
   id: nextId++,
+  author: record.author,
   title: record.title,
   text: record.text,
 });

@@ -1,11 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux'
 
 import Blog from '../Blog/Blog';
-
-const mapStateToProps = ({ blogs }) => ({
-  blogs
-});
 
 const BlogList = ({ blogs }) => {
   return(
@@ -15,4 +10,4 @@ const BlogList = ({ blogs }) => {
   );
 }
 
-export default connect(mapStateToProps)(BlogList);
+export default BlogList;

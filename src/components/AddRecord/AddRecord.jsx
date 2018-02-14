@@ -10,6 +10,7 @@ const mapDispatchToProps = dispatch => ({
 
 class AddRecord extends React.Component {
   state = {
+    author: '',
     title: '',
     text: '',
   };
@@ -17,6 +18,11 @@ class AddRecord extends React.Component {
   onSubmitForm = e => {
     e.preventDefault();
     this.props.onAddRecord(this.state);
+  };
+
+  handleAuthorChange = e => {
+    e.preventDefault();
+    this.setState({ author: e.target.value });
   };
 
   handleTitleChange = e => {
@@ -33,8 +39,17 @@ class AddRecord extends React.Component {
     return(
       <div>
         <form onSubmit={this.onSubmitForm} autoComplete="off">
+          <label htmlFor="author">
+            Author
+          </label>
+          <input
+            name="author"
+            id="author"
+            value={this.state.author}
+            onChange={this.handleAuthorChange}
+          />
           <label htmlFor="title">
-            title
+            Title
           </label>
           <input
             name="title"
@@ -42,10 +57,8 @@ class AddRecord extends React.Component {
             value={this.state.title}
             onChange={this.handleTitleChange}
           />
-          <br/>
-          <br/>
           <label htmlFor="text">
-            text
+            Text
           </label>
           <input
             name="text"

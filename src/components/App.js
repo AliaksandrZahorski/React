@@ -1,8 +1,9 @@
 import React from 'react';
+
+import BlogContainer from './BlogContainer/BlogContainer';
+import AddRecord from './AddRecord/AddRecord';
 import logo from './logo.svg';
 import './App.css';
-import BlogList from './BlogList/BlogList';
-import AddRecord from './AddRecord/AddRecord';
 
 const App = () => (
   <div className="App">
@@ -13,7 +14,7 @@ const App = () => (
     <p className="App-intro">
     </p>
     <AddRecord />
-    <BlogList />
+    <BlogContainer />
   </div>
 )
 
